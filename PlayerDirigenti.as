@@ -18,20 +18,6 @@
 			// constructor code
 			var paramList:Object = this.root.loaderInfo.parameters;
 			
-			// funzione per rimuovere tutti i children caricati precedentemente in un movieclip
-			function removeChildrenOf(mc:MovieClip):void{
-				if(mc.numChildren!=0){
-					var k:int = mc.numChildren;
-					while( k -- )
-					{
-						mc.removeChildAt( k );
-					}
-				}
-			}
-			
-			
-			
-			
 			// carico i dati esternamente
 
 			var imageLoader:Loader;
@@ -80,6 +66,17 @@
 				if(MyGlobal.done==1)mostramodulo();
 
 			} 
+			
+			// funzione per rimuovere tutti i children caricati precedentemente in un movieclip
+			function removeChildrenOf(mc:MovieClip):void{
+				if(mc.numChildren!=0){
+					var k:int = mc.numChildren;
+					while( k -- )
+					{
+						mc.removeChildAt( k );
+					}
+				}
+			}
 			
 			// funzioni per caricamento immagini esterne
 
